@@ -1,0 +1,3 @@
+function figGenAutoCorrQuadTreePlots
+    evalAutoCorrQuadTree();
+end
