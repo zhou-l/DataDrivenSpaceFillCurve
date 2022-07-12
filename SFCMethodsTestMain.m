@@ -34,6 +34,7 @@ zalpha = 0.1; %0.9;
 % figure, imagesc(WpYU);
 
 [T,mstSet] = findMinSpanTree(WpXR, WpXL, WpYU, WpYD);
+% [T,mstSet] = findMinSpanTree2(WpXR, WpXL, WpYU, WpYD);
 % for reference
 
 
@@ -123,7 +124,7 @@ travOrderLine = zeros(dimY, dimX);
 for i = 1:length(myVO)
     travOrder(myVO(i,1),myVO(i,2)) = i;
     travOrder2(contextVO(i,1),contextVO(i,2)) = i;
-%    travOrderHil(HilVO(i,1),HilVO(i,2)) = i;
+    travOrderHil(HilVO(i,1),HilVO(i,2)) = i;
     travOrderLine(lineVO(i,1),lineVO(i,2)) = i;
     %         if showAnim
     %             imagesc(travOrder);
