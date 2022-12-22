@@ -4,13 +4,8 @@ global V;
 V = [0 0 0 0 0 0 0 0
      0 1 1 1 0 0 0 0
      0 1 1 1 1 1 0 0
-     0 0 0 0 1 1 0 0
-%      0 0 0 0 0 0 0 0
-%      0 1 1 1 0 0 0 0
-%      0 1 1 1 1 1 0 0
-%      0 0 0 0 1 1 0 0
-];
- isPad = true;%false;
+     0 0 0 0 1 1 0 0];
+ isPad = true;
 baseFileName = 'minimum2Dcase';
 if isPad
     maxSize = max(size(V));

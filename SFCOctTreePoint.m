@@ -633,7 +633,7 @@ function [inFaceNodes, outFaceNodes] = getInoutFaceNodes(blockmin, blockmax, inF
 end
 
 function epix = getEquivPixAtLvl(entryPix, srcLvl, destLvl)
-epix = ceil(entryPix ./ (2^(destLvl-srcLvl)));
+epix = ceil(entryPix ./ double(2^(destLvl-srcLvl)));
 end
 
 function blkSize = lvlToNodeSize(lvl)

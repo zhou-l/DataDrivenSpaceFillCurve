@@ -26,6 +26,10 @@ if useSphereVol
     V = imdiffusefilt(V);
     V = V .* 255;
 
+    filepath = '.';
+    ltfilename = 'LTtestSphere.csv';
+    vofilename = 'VOtestSphere.csv';
+    name = 'testSphere';
 %     volumeViewer(V);
 %     filepath = [];
 %     name = 'testSphere';
