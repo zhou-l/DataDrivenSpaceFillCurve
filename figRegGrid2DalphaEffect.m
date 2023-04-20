@@ -3,7 +3,7 @@
 % listACvals -- has numAlphas rows of autocorrelations of data values
 % listACdist -- has numAlphas rows of autocorrelations of Eucledian
 % distance
-function [listACvals, listACdist]= figRegGrid2DalphaEffect(filename)
+function [listACvals, listACdist]= figRegGrid2DalphaEffect(filename, alphaList)
 close all;
 V = imread(filename);
 
@@ -12,6 +12,13 @@ if length(size(V))==3
 else
     V = double(V(:,:,1));
 end
+
+if nargin < 2
+    alphas = [0, 0.01, 0.2, 0.4, 0.6, 0.8];
+else
+    alphas = alphaList;
+end
+
   V = V ./ 255;
   
  V = padImgToPow2(V);
@@ -30,7 +37,7 @@ numAlphas = 6;
 listACvals = zeros(numAlphas, maxLags);
 listACdist = zeros(numAlphas, maxLags);
 % alphas = [0, 0.001, 0.01, 0.05, 0.1, 0.2];
-alphas = [0, 0.01, 0.2, 0.4, 0.6, 0.8];
+% alphas = [0, 0.01, 0.2, 0.4, 0.6, 0.8];
 numAlphas = length(alphas);
 for i = 1:numAlphas
     zalpha = alphas(i);%(i-1)*0.2;
@@ -76,7 +83,7 @@ for i = 1:numAlphas
         travOrder(hamOrder(j,1),hamOrder(j,2)) = j;
     end
     subplot(3, 6, i), imagesc(travOrder);
-    strTitle = sprintf('\\alpha = %.1f', zalpha);
+    strTitle = sprintf('\\alpha = %.3f', zalpha);
     title(strTitle);
     line(hamOrder(:,2), hamOrder(:,1));
     if i == 1
