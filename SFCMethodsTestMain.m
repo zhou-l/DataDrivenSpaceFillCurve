@@ -32,7 +32,7 @@ zalpha = 0.1; %0.9;
 % figure, imagesc(WpXL);
 % figure, imagesc(WpYD);
 % figure, imagesc(WpYU);
-
+% 
 [T,mstSet] = findMinSpanTree(WpXR, WpXL, WpYU, WpYD);
 % [T,mstSet] = findMinSpanTree2(WpXR, WpXL, WpYU, WpYD);
 % for reference
@@ -62,11 +62,9 @@ title('Context SFC Hamilton');
 csfcHamOrder = visitOrder;
 %% Ours
 useLocWeight = true;
-zalpha = 0.1;
+zalpha = 0.2;
 [Gmag,Gdir] = imgradient(V);
 [GpXR, GpXL, GpYU, GpYD] = buildSmallCircsDualGraph(Gmag);
-
-% [GpXR, GpXL, GpYU, GpYD] = buildSmallCircsDualGraph(Gmag);
 [T,mstSet] = findMinSpanTree2(WpXR, WpXL, WpYU, WpYD, GpXR, GpXL, GpYU, GpYD);
 %     [T,mstSet] = findMinSpanTree(WpXR, WpXL, WpYU, WpYD);
 %     [LT,visitOrder] = linearizeHamCycle(T, V, [dimY,1]);
