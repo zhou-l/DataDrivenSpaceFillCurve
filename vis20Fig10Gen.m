@@ -1,6 +1,6 @@
 %coarse level image file name: clFilename
 %next level image file name: nlFilename
-function [clLT, clVisitOrder, fullLT] = vis20Fig8Gen
+function [clLT, clVisitOrder, fullLT] = vis20Fig10Gen
     close all;
     
     % use test cases
