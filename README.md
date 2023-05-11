@@ -1,5 +1,5 @@
 # DataDrivenSpaceFillCurve
-Research codes of "Data-Driven Space-Filling Curves" (https://arxiv.org/abs/2009.06309). Certified with the Replicability Stamp (https://www.replicabilitystamp.org/#https-github-com-zhou-l-datadrivenspacefillcurve) </br> 
+Research codes of "Data-Driven Space-Filling Curves" (https://arxiv.org/abs/2009.06309). Certified with the Replicability Stamp (https://www.replicabilitystamp.org/#https-github-com-zhou-l-datadrivenspacefillcurve). </br> 
 Please cite the paper if you use the codes:</br>
 
 **L. Zhou, C. R. Johnson and D. Weiskopf, "Data-Driven Space-Filling Curves," in _IEEE Transactions on Visualization and Computer Graphics_, doi: 10.1109/TVCG.2020.3030473.**
